@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
     res.send(JSON.stringify(location))
 })
 
-const port = process.env.NODE_ENV || 3030
+const port = process.env.PORT || 3030
 
 app.listen(port, () => {
     console.log(`Server listen on port ${port}`);
