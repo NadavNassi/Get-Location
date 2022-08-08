@@ -6,6 +6,8 @@ const app = express()
 
 app.get('/', (req, res) => {
     const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress
+    console.log("🚀 ~ file: index.js ~ line 9 ~ app.get ~ ip", ip)
+    // const {ip} = req.params
     const location = locationService.getLocation(ip)
     res.send(JSON.stringify(location))
 })
